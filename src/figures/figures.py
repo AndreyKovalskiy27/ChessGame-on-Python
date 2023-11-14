@@ -5,7 +5,7 @@ class FigureColor:
     WHITE: Field with white-color figure
     BLACK: Field with black-color figure
     """
-    EMPTY = '.'
+    EMPTY = '·'
     WHITE = 0
     BLACK = 1
 
