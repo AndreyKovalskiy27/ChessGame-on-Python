@@ -1,10 +1,10 @@
 import os
 import random
 import time
-
 import board
 import figures
 import configuration
+from fill import FILL
 
 
 class Game:
@@ -12,7 +12,7 @@ class Game:
 
     def __init__(self):
         self.chess_board = board.Board()
-        configuration.FILL(self.chess_board)
+        FILL(self.chess_board)
 
 
 
@@ -99,6 +99,6 @@ class Game:
 
                     break
 
-
-game = Game()
-game.run()
+if __name__ == "__main__":
+    game = Game()
+    game.run()

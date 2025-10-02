@@ -5,6 +5,7 @@ class Pawn(Figure):
     """Pawn"""
     img = PAWN
     code = FigureCode.pawn
+    value = 1
 
     def get_moves(self, board):
         """Get all pawn moves"""

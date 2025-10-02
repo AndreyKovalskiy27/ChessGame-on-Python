@@ -5,6 +5,7 @@ class Rook(Figure):
     """Rook"""
     img = ROOK
     code = FigureCode.rook
+    value = 5
 
     def x_moves(self, board, moves_list):
         """Moves on horizontal"""

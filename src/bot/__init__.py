@@ -1,3 +1,0 @@
-"""Chess bot (not ai)"""
-
-
