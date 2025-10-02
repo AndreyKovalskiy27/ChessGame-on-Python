@@ -4,7 +4,7 @@ import time
 
 import board
 import figures
-import const
+import configuration
 
 
 class Game:
@@ -12,12 +12,12 @@ class Game:
 
     def __init__(self):
         self.chess_board = board.Board()
-        const.FILL(self.chess_board)
+        configuration.FILL(self.chess_board)
 
 
 
     def run(self):
-        whose_move = const.FIRST_MOVE
+        whose_move = configuration.FIRST_MOVE
 
         while True:
             if whose_move == 0:
@@ -44,8 +44,8 @@ class Game:
                     print(f'Blacks: {len(blacks_figures)}')
                     whose_move = 1
 
-                    if const.MOVE_SPEED > 0:
-                        time.sleep(const.MOVE_SPEED)
+                    if configuration.MOVE_SPEED > 0:
+                        time.sleep(configuration.MOVE_SPEED)
                     
                     else:
                         input("Press enter to continue")
@@ -84,8 +84,8 @@ class Game:
                     print(f'Blacks: {len(blacks_figures)}')
                     whose_move = 0
 
-                    if const.MOVE_SPEED > 0:
-                        time.sleep(const.MOVE_SPEED)
+                    if configuration.MOVE_SPEED > 0:
+                        time.sleep(configuration.MOVE_SPEED)
                     
                     else:
                         input("Press enter to continue")

@@ -1,10 +1,14 @@
+"""Configurate game, chess bot or even pieces!"""
+
+
 import figures
 
-# Game
-MOVE_SPEED = 0
+
+# GAME
+MOVE_SPEED: int = 0
 FIRST_MOVE = 0 # 0, 1
 
-@staticmethod
+
 def FILL(chess_board):
     """
     This function fills the board by using FIDE chess rules.
@@ -56,10 +60,11 @@ def FILL(chess_board):
     chess_board.put_figure(pawn15)
     chess_board.put_figure(pawn16)
 
-# Figures
-ROOK = ('♜', '♖')
-PAWN = ('♟', '♙')
+# FIGURES
+#      white     black
+ROOK = ('♜',    '♖')
+PAWN = ('♟',    '♙')
 
-# Bot
-BOT_SIDE = 0 # 0, 1, 2
-THINKING_DEPTH: int = 10
+# CHESS-BOT CONFIGURATION
+BOT_SIDE = "white" # white, black, both
+THINKING_DEPTH: int = 10 # any number bigger than 0

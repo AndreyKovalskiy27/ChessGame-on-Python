@@ -1,5 +1,5 @@
 from figures.figures import Figure, FigureColor, FigureCode
-from const import ROOK
+from configuration import ROOK
 
 class Rook(Figure):
     """Rook"""

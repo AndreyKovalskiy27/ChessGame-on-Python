@@ -1,5 +1,5 @@
 from figures.figures import Figure, FigureColor, FigureCode
-from const import PAWN
+from configuration import PAWN
 
 class Pawn(Figure):
     """Pawn"""
