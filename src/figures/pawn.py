@@ -1,9 +1,9 @@
 from figures.figures import Figure, FigureColor, FigureCode
-
+from const import PAWN
 
 class Pawn(Figure):
     """Pawn"""
-    img = ('♟', '♙')
+    img = PAWN
     code = FigureCode.pawn
 
     def get_moves(self, board):

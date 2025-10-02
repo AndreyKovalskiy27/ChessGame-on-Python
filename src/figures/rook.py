@@ -1,9 +1,9 @@
 from figures.figures import Figure, FigureColor, FigureCode
-
+from const import ROOK
 
 class Rook(Figure):
     """Rook"""
-    img = ('♜', '♖')
+    img = ROOK
     code = FigureCode.rook
 
     def x_moves(self, board, moves_list):
