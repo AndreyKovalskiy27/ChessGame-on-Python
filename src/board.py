@@ -1,5 +1,5 @@
 from figures import FigureColor, Pawn, Rook, FigureCode
-
+from copy import deepcopy
 
 class Board:
     """Class of board"""
@@ -35,6 +35,22 @@ class Board:
         else:  # If figure hasn't this move in moves list
             raise ValueError
 
+    def get_all_moves(self, color: FigureColor):
+        """Get all possible moves for the given color.
+
+        Returns:
+            List of ((x, y), move) pairs
+        """
+        moves = []
+        for row in self.board:
+            for piece in row:
+                if piece != FigureColor.EMPTY and piece.color == color:
+                    from_pos = (piece.x, piece.y)
+                    for move in piece.get_moves(self):
+                        moves.append((from_pos, move))
+        return moves
+
+
     def get_whites_figures(self):
         """Get whites figures"""
         whites = []
@@ -58,6 +74,12 @@ class Board:
                         blacks.append(y)
 
         return blacks
+
+    def copy(self):
+        new_board = Board()
+        new_board.board = deepcopy(self.board)
+        return new_board
+
 
     def __str__(self):
         result = ''
